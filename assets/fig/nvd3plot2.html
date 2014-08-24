@@ -1,0 +1,721 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://nvd3.org/assets/css/nv.d3.css'>
+    
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_nvd3_tests/libraries/widgets/nvd3/js/nv.d3.min-new.js' type='text/javascript'></script>
+    <script src='http://nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'economicDamage' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      draweconomicDamage()
+    });
+    function draweconomicDamage(){  
+      var opts = {
+ "dom": "economicDamage",
+"width":    800,
+"height":    400,
+"x": "Year",
+"y": "value",
+"group": "variable",
+"type": "stackedAreaChart",
+"id": "economicDamage" 
+},
+        data = [
+ {
+ "Year": 1950,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1950,
+"variable": "Properties",
+"value":       34.48165 
+},
+{
+ "Year": 1951,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1951,
+"variable": "Properties",
+"value":       65.50599 
+},
+{
+ "Year": 1952,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1952,
+"variable": "Properties",
+"value":       94.10224 
+},
+{
+ "Year": 1953,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1953,
+"variable": "Properties",
+"value":       596.1047 
+},
+{
+ "Year": 1954,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1954,
+"variable": "Properties",
+"value":       85.80532 
+},
+{
+ "Year": 1955,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1955,
+"variable": "Properties",
+"value":       82.66057 
+},
+{
+ "Year": 1956,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1956,
+"variable": "Properties",
+"value":      116.91235 
+},
+{
+ "Year": 1957,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1957,
+"variable": "Properties",
+"value":      224.36389 
+},
+{
+ "Year": 1958,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1958,
+"variable": "Properties",
+"value":      128.99461 
+},
+{
+ "Year": 1959,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1959,
+"variable": "Properties",
+"value":       87.45304 
+},
+{
+ "Year": 1960,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1960,
+"variable": "Properties",
+"value":      118.22424 
+},
+{
+ "Year": 1961,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1961,
+"variable": "Properties",
+"value":      179.38873 
+},
+{
+ "Year": 1962,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1962,
+"variable": "Properties",
+"value":       67.20073 
+},
+{
+ "Year": 1963,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1963,
+"variable": "Properties",
+"value":       87.18058 
+},
+{
+ "Year": 1964,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1964,
+"variable": "Properties",
+"value":      165.99082 
+},
+{
+ "Year": 1965,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1965,
+"variable": "Properties",
+"value":     1762.49904 
+},
+{
+ "Year": 1966,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1966,
+"variable": "Properties",
+"value":      476.62936 
+},
+{
+ "Year": 1967,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1967,
+"variable": "Properties",
+"value":      576.76672 
+},
+{
+ "Year": 1968,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1968,
+"variable": "Properties",
+"value":      210.07991 
+},
+{
+ "Year": 1969,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1969,
+"variable": "Properties",
+"value":      113.27423 
+},
+{
+ "Year": 1970,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1970,
+"variable": "Properties",
+"value":      625.20598 
+},
+{
+ "Year": 1971,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1971,
+"variable": "Properties",
+"value":      199.34555 
+},
+{
+ "Year": 1972,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1972,
+"variable": "Properties",
+"value":      151.17257 
+},
+{
+ "Year": 1973,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1973,
+"variable": "Properties",
+"value":     2063.06656 
+},
+{
+ "Year": 1974,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1974,
+"variable": "Properties",
+"value":     1943.26778 
+},
+{
+ "Year": 1975,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1975,
+"variable": "Properties",
+"value":      826.72379 
+},
+{
+ "Year": 1976,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1976,
+"variable": "Properties",
+"value":      308.49719 
+},
+{
+ "Year": 1977,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1977,
+"variable": "Properties",
+"value":      342.02423 
+},
+{
+ "Year": 1978,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1978,
+"variable": "Properties",
+"value":      616.06791 
+},
+{
+ "Year": 1979,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1979,
+"variable": "Properties",
+"value":      946.24124 
+},
+{
+ "Year": 1980,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1980,
+"variable": "Properties",
+"value":      2152.8141 
+},
+{
+ "Year": 1981,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1981,
+"variable": "Properties",
+"value":      765.88831 
+},
+{
+ "Year": 1982,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1982,
+"variable": "Properties",
+"value":       1428.468 
+},
+{
+ "Year": 1983,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1983,
+"variable": "Properties",
+"value":      765.85309 
+},
+{
+ "Year": 1984,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1984,
+"variable": "Properties",
+"value":     2131.17139 
+},
+{
+ "Year": 1985,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1985,
+"variable": "Properties",
+"value":     1608.09721 
+},
+{
+ "Year": 1986,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1986,
+"variable": "Properties",
+"value":     1034.90984 
+},
+{
+ "Year": 1987,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1987,
+"variable": "Properties",
+"value":      407.83795 
+},
+{
+ "Year": 1988,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1988,
+"variable": "Properties",
+"value":     1124.21465 
+},
+{
+ "Year": 1989,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1989,
+"variable": "Properties",
+"value":     1760.04855 
+},
+{
+ "Year": 1990,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1990,
+"variable": "Properties",
+"value":     1560.56807 
+},
+{
+ "Year": 1991,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1991,
+"variable": "Properties",
+"value":     1152.29643 
+},
+{
+ "Year": 1992,
+"variable": "Crops",
+"value":              0 
+},
+{
+ "Year": 1992,
+"variable": "Properties",
+"value":      1406.6889 
+},
+{
+ "Year": 1993,
+"variable": "Crops",
+"value":       241.9354 
+},
+{
+ "Year": 1993,
+"variable": "Properties",
+"value":      5686.3791 
+},
+{
+ "Year": 1994,
+"variable": "Crops",
+"value":     5216.36085 
+},
+{
+ "Year": 1994,
+"variable": "Properties",
+"value":      563.32015 
+},
+{
+ "Year": 1995,
+"variable": "Crops",
+"value":      891.18866 
+},
+{
+ "Year": 1995,
+"variable": "Properties",
+"value":      25.690725 
+},
+{
+ "Year": 1996,
+"variable": "Crops",
+"value":      434.43839 
+},
+{
+ "Year": 1996,
+"variable": "Properties",
+"value":        22.0847 
+},
+{
+ "Year": 1997,
+"variable": "Crops",
+"value":       165.1616 
+},
+{
+ "Year": 1997,
+"variable": "Properties",
+"value":     3422.40715 
+},
+{
+ "Year": 1998,
+"variable": "Crops",
+"value":      484.64385 
+},
+{
+ "Year": 1998,
+"variable": "Properties",
+"value":      522.68614 
+},
+{
+ "Year": 1999,
+"variable": "Crops",
+"value":       454.9197 
+},
+{
+ "Year": 1999,
+"variable": "Properties",
+"value":        138.779 
+},
+{
+ "Year": 2000,
+"variable": "Crops",
+"value":       744.1826 
+},
+{
+ "Year": 2000,
+"variable": "Properties",
+"value":        10.1755 
+},
+{
+ "Year": 2001,
+"variable": "Crops",
+"value":        53.6788 
+},
+{
+ "Year": 2001,
+"variable": "Properties",
+"value":        40.2345 
+},
+{
+ "Year": 2002,
+"variable": "Crops",
+"value":      137.70951 
+},
+{
+ "Year": 2002,
+"variable": "Properties",
+"value":         238.61 
+},
+{
+ "Year": 2003,
+"variable": "Crops",
+"value":       216.7248 
+},
+{
+ "Year": 2003,
+"variable": "Properties",
+"value":        348.277 
+},
+{
+ "Year": 2004,
+"variable": "Crops",
+"value":      367.94895 
+},
+{
+ "Year": 2004,
+"variable": "Properties",
+"value":          7.214 
+},
+{
+ "Year": 2005,
+"variable": "Crops",
+"value":       198.7034 
+},
+{
+ "Year": 2005,
+"variable": "Properties",
+"value":         30.961 
+},
+{
+ "Year": 2006,
+"variable": "Crops",
+"value":       650.3938 
+},
+{
+ "Year": 2006,
+"variable": "Properties",
+"value":      674.69325 
+},
+{
+ "Year": 2007,
+"variable": "Crops",
+"value":         764.02 
+},
+{
+ "Year": 2007,
+"variable": "Properties",
+"value":      3934.4383 
+},
+{
+ "Year": 2008,
+"variable": "Crops",
+"value":       1534.995 
+},
+{
+ "Year": 2008,
+"variable": "Properties",
+"value":     6950.86539 
+},
+{
+ "Year": 2009,
+"variable": "Crops",
+"value":         90.134 
+},
+{
+ "Year": 2009,
+"variable": "Properties",
+"value":     3255.13673 
+},
+{
+ "Year": 2010,
+"variable": "Crops",
+"value":       1296.398 
+},
+{
+ "Year": 2010,
+"variable": "Properties",
+"value":     5415.05089 
+},
+{
+ "Year": 2011,
+"variable": "Crops",
+"value":        414.774 
+},
+{
+ "Year": 2011,
+"variable": "Properties",
+"value":    19373.74707 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        chart
+  .margin({
+ "left":    100 
+})
+          
+        chart.xAxis
+  .axisLabel("Year")
+  .width(    70)
+
+        
+        
+        chart.yAxis
+  .axisLabel("Economical damage")
+  .width(    80)
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
