@@ -1,5 +1,6 @@
 library(shiny)
 library(rCharts)
+library(base64enc)
 
 shinyUI(
     navbarPage("Most dangerous phenomena in USA",
